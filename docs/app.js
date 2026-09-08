@@ -1,151 +1,87 @@
 (() => {
-  "use strict";
-
   const config = window.GUDEL_CONFIG || {};
-
-  function initMetaPixel() {
-    const id = String(config.META_PIXEL_ID || "").trim();
-    if (!/^\d{8,20}$/.test(id)) return;
-    if (window.fbq) return;
-
-    const fbq = window.fbq = function () {
-      fbq.callMethod ? fbq.callMethod.apply(fbq, arguments) : fbq.queue.push(arguments);
-    };
-    if (!window._fbq) window._fbq = fbq;
-    fbq.push = fbq;
-    fbq.loaded = true;
-    fbq.version = "2.0";
-    fbq.queue = [];
-
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://connect.facebook.net/en_US/fbevents.js";
-    document.head.appendChild(script);
-    fbq("init", id);
-    fbq("track", "PageView");
-  }
-
-  function track(name, parameters = {}) {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: name, ...parameters });
-  }
-
-  function captureUtm() {
-    const params = new URLSearchParams(window.location.search);
-    ["utm_source", "utm_medium", "utm_campaign", "utm_content"].forEach((key) => {
-      const element = document.getElementById(key);
-      if (element) element.value = params.get(key) || sessionStorage.getItem(key) || "";
-      if (params.get(key)) sessionStorage.setItem(key, params.get(key));
-    });
-  }
-
-  function setError(input, message) {
-    const key = input.name === "privacy" ? "privacy" : input.id;
-    const error = document.querySelector(`[data-error-for="${key}"]`);
-    if (message) {
-      input.setAttribute("aria-invalid", "true");
-      if (error) error.textContent = message;
-    } else {
-      input.removeAttribute("aria-invalid");
-      if (error) error.textContent = "";
+  const themes = {
+    abholung: {
+      title: 'Wir holen Ihre Werkzeuge im Betrieb ab.',
+      text: 'Gudel Werkzeuge übernimmt Abholung, Schärfen und Rücklieferung für holzverarbeitende Betriebe in der Region.',
+      image: 'assets/team-workshop.jpg',
+      alt: 'Mitarbeiter von Gudel Werkzeuge in der eigenen Werkstatt'
+    },
+    werkstatt: {
+      title: 'Ihre Werkzeuge werden bei uns im Haus geschärft.',
+      text: 'Eigene CNC-Schleiftechnik, zwei Präzisionswerkzeugmechaniker-Meister und ein fester Ansprechpartner.',
+      image: 'assets/maschinenpark.jpg',
+      alt: 'CNC-Schleiftechnik in der Werkstatt von Gudel Werkzeuge'
+    },
+    zuverlaessig: {
+      title: 'Sie suchen einen zuverlässigen Schärfdienst?',
+      text: 'Wir holen Ihre Werkzeuge ab, schärfen sie in unserer eigenen Werkstatt und bringen sie wieder zurück.',
+      image: 'assets/team-workshop.jpg',
+      alt: 'Team von Gudel Werkzeuge in der eigenen Werkstatt'
     }
+  };
+
+  const params = new URLSearchParams(location.search);
+  const themeKey = themes[params.get('thema')] ? params.get('thema') : 'zuverlaessig';
+  const theme = themes[themeKey];
+  document.querySelector('#hero-title').textContent = theme.title;
+  document.querySelector('#hero-text').textContent = theme.text;
+  const heroImage = document.querySelector('#hero-image');
+  heroImage.src = theme.image;
+  heroImage.alt = theme.alt;
+  document.querySelector('#campaign-theme').value = themeKey;
+
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach((name) => {
+    const field = document.querySelector(`#${name}`);
+    if (field) field.value = params.get(name) || '';
+  });
+
+  if (/^\d{5,20}$/.test(String(config.META_PIXEL_ID || ''))) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', String(config.META_PIXEL_ID));
+    fbq('track', 'PageView');
   }
 
-  function validate(form) {
-    let valid = true;
-    const messages = {
-      firstName: "Bitte geben Sie Ihren Vornamen ein.",
-      lastName: "Bitte geben Sie Ihren Nachnamen ein.",
-      company: "Bitte geben Sie Ihre Firma ein.",
-      phone: "Bitte geben Sie eine Telefonnummer ein."
-    };
-
-    [...form.elements].forEach((field) => {
-      if (!field.required) return;
-      const missing = field.type === "checkbox" ? !field.checked : !field.value.trim();
-      const phoneInvalid = field.name === "phone" && !missing && field.value.replace(/\D/g, "").length < 6;
-      const message = missing ? messages[field.name] : phoneInvalid ? "Bitte prüfen Sie die Telefonnummer." : "";
-      setError(field, message);
-      if (message) valid = false;
-    });
-    return valid;
-  }
-
-  async function submitForm(event) {
+  const form = document.querySelector('.request-form');
+  const status = document.querySelector('#form-status');
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const form = event.currentTarget;
-    const status = document.getElementById("form-status");
-    const button = form.querySelector("button[type=submit]");
-
-    status.textContent = "";
-    status.className = "form-status form-wide";
-
-    if (!validate(form)) {
-      const firstInvalid = form.querySelector("[aria-invalid=true]");
-      if (firstInvalid) firstInvalid.focus();
+    status.className = 'form-status';
+    const required = [...form.querySelectorAll('[required]')];
+    let firstInvalid = null;
+    required.forEach((field) => {
+      const invalid = !field.value.trim();
+      field.setAttribute('aria-invalid', String(invalid));
+      if (invalid && !firstInvalid) firstInvalid = field;
+    });
+    if (firstInvalid) {
+      status.textContent = 'Bitte füllen Sie die vier Felder vollständig aus.';
+      status.classList.add('error');
+      firstInvalid.focus();
       return;
     }
-    if (form.website.value) return;
 
+    const button = form.querySelector('button');
     button.disabled = true;
-    button.querySelector("span").textContent = "Wird gesendet …";
-
-    const endpoint = String(config.FORM_ENDPOINT || "").trim();
-    const preview = config.PREVIEW_MODE === true || !endpoint;
-
-    if (preview) {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      status.textContent = "Vorschau erfolgreich: Das Formular ist vollständig und bereit. Für den E-Mail-Versand fehlt nur noch der Formular-Endpunkt.";
-      status.classList.add("success");
+    if (config.PREVIEW_MODE || !config.FORM_ENDPOINT) {
+      status.textContent = 'Vorschau erfolgreich – es wurde keine echte Anfrage versendet.';
+      status.classList.add('success');
       button.disabled = false;
-      button.querySelector("span").textContent = "Rückruf anfordern";
-      track("preview_form_complete");
       return;
     }
 
     try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Accept": "application/json" },
-        body: new FormData(form)
-      });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-      status.textContent = "Vielen Dank. Wir haben Ihre Anfrage erhalten und melden uns persönlich bei Ihnen.";
-      status.classList.add("success");
+      const response = await fetch(config.FORM_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
+      if (!response.ok) throw new Error('Versand fehlgeschlagen');
+      status.textContent = 'Vielen Dank. Wir melden uns telefonisch bei Ihnen.';
+      status.classList.add('success');
+      if (window.fbq) fbq('track', 'Lead', { content_name: themeKey });
       form.reset();
-      captureUtm();
-      track("lead_submit", { form: "callback" });
-      if (window.fbq) window.fbq("track", "Lead");
-    } catch (error) {
-      status.textContent = "Die Anfrage konnte nicht gesendet werden. Bitte rufen Sie uns unter 02369 20990-0 an.";
-      status.classList.add("error");
-      button.disabled = false;
-      button.querySelector("span").textContent = "Erneut versuchen";
-      track("lead_submit_error", { message: String(error) });
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    initMetaPixel();
-    captureUtm();
-
-    document.querySelectorAll("[data-track]").forEach((element) => {
-      element.addEventListener("click", () => track(element.dataset.track));
-    });
-
-    const form = document.getElementById("callback-form");
-    const notice = document.getElementById("preview-notice");
-    if (form) form.addEventListener("submit", submitForm);
-    if (notice && (config.PREVIEW_MODE === true || !config.FORM_ENDPOINT)) notice.hidden = false;
-
-    const video = document.querySelector("video");
-    const playButton = document.querySelector("[data-play-video]");
-    if (video && playButton) {
-      playButton.addEventListener("click", async () => {
-        video.scrollIntoView({ behavior: "smooth", block: "center" });
-        try { await video.play(); track("video_play"); } catch (_) { /* native controls remain available */ }
-      });
+    } catch {
+      status.textContent = 'Die Anfrage konnte nicht versendet werden. Bitte rufen Sie uns unter 02369 20990-0 an.';
+      status.classList.add('error');
+    } finally {
+      button.disabled = false
     }
   });
 })();
