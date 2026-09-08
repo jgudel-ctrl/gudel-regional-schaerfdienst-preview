@@ -1,0 +1,20 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+*.log
+.impeccable/
+
+# Public preview repository publishes only README.md and docs/
+/.agents/
+/assets/
+/ads/
+/PRODUCT.md
+/CAMPAIGN_PLAN.md
+/app.js
+/config.js
+/index.html
+/styles.css
+/qa.mjs
+/overflow.mjs
+/capture-ads.mjs
