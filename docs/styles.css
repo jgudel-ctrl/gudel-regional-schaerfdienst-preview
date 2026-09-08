@@ -21,7 +21,7 @@
   --warm: #c2b7ac;
   --warm-light: #e8e2dc;
   --orange: #f59a2a;
-  --orange-dark: #c86708;
+  --orange-dark: #a94d00;
   --line: rgba(28, 34, 40, .18);
   --muted: #5e6266;
   --success: #0c6d4c;
@@ -208,6 +208,7 @@ details p { max-width: 65ch; margin: -4px 50px 26px 0; color: var(--muted); }
 .field-error { min-height: 17px; color: var(--danger); font-size: 13px; }
 .consent { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: start; font-size: 14px; line-height: 1.45; }
 .consent input { width: 19px; height: 19px; margin-top: 2px; accent-color: var(--orange-dark); }
+.privacy-note { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
 .submit-button { width: 100%; gap: 10px; }
 .submit-button svg { width: 22px; fill: none; stroke: currentColor; stroke-width: 2; }
 .submit-button:disabled { cursor: wait; opacity: .68; transform: none; }

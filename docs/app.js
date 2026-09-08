@@ -57,8 +57,7 @@
       firstName: "Bitte geben Sie Ihren Vornamen ein.",
       lastName: "Bitte geben Sie Ihren Nachnamen ein.",
       company: "Bitte geben Sie Ihre Firma ein.",
-      phone: "Bitte geben Sie eine Telefonnummer ein.",
-      privacy: "Bitte bestätigen Sie die Datenschutzerklärung."
+      phone: "Bitte geben Sie eine Telefonnummer ein."
     };
 
     [...form.elements].forEach((field) => {
