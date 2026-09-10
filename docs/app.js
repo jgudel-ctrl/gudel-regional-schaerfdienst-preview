@@ -3,13 +3,13 @@
   const icon = name => `<svg aria-hidden="true"><use href="#i-${name}"></use></svg>`;
   const themes = {
     service: {
-      title: 'Zuverlässiger Schärfdienst mit kostenlosem Hol- und Bringservice.',
-      text: 'Für Betriebe im Niederrhein, Münsterland und Ruhrgebiet.',
+      title: 'Zuverlässiger Schärfdienst gesucht?',
+      text: 'Wir holen Ihre Werkzeuge planbar ab, schärfen sie in unserer eigenen Werkstatt und bringen sie wieder zurück.',
       image: 'assets/team-workshop.jpg', alt: 'Team von Gudel Werkzeuge in der eigenen Werkstatt', label: 'Regionaler Schärfdienst',
       benefits: [
-        ['calendar','Fester Tourtag','Regelmäßige Abholung und Rücklieferung.'],
-        ['mail','Automatische E-Mail','Am Morgen werden Sie über unseren Besuch informiert.'],
-        ['bolt','Kostenloser Express-Service','Bei Bedarf fahren wir außerhalb der Tour – ohne Mehrkosten.']
+        ['calendar','Feste Touren','Regelmäßige und planbare Abholung in Ihrem Betrieb.'],
+        ['mail','Rechtzeitige Information','Am Tourtag erhalten Sie morgens automatisch eine E-Mail.'],
+        ['bolt','Kostenlose Sonderfahrten','Bei dringendem Bedarf holen wir nach Absprache auch außerhalb der regulären Tour ab.']
       ],
       formIntro: 'Senden Sie uns Ihre Kontaktdaten. Wir melden uns persönlich.'
     },
