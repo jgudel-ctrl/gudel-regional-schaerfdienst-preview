@@ -15,6 +15,5 @@ node_modules/
 /config.js
 /index.html
 /styles.css
-/qa.mjs
 /overflow.mjs
 /capture-ads.mjs

@@ -1,0 +1,43 @@
+{
+  "scope": "Media selected for the Gudel regional sharpening-service landing page",
+  "retrieved_at": "2026-09-10",
+  "rights_note": "Public availability does not establish reuse rights. Gudel Werkzeuge must confirm ownership/permission before publication.",
+  "shipping_assignments": {
+    "hero_by_campaign": {
+      "zuverlässigkeit": "video-poster.jpg",
+      "service_alias": "video-poster.jpg",
+      "abholservice": "team-workshop.jpg",
+      "touren": "maschinenpark.jpg",
+      "express": "saegeblatt.jpg",
+      "regional": "christian-jan-bernd.jpg",
+      "digital": "pkd-bearbeitung.jpg"
+    },
+    "social_proof_context": "team-workshop.jpg",
+    "contacts": "christian-jan-bernd.jpg",
+    "tool_images": ["saegeblatt.jpg", "oberfraeser.jpg", "profilmesser-koepfe.jpg", "bohrer.png", "hobelmesser.jpg", "pkd-fuegefraeser.jpg"],
+    "region_map": "Inline SVG authored for this preview; schematic geometry, not a raster and not an assertion of exact tour coverage."
+  },
+  "assets": [
+    {"file":"logo-gudel.svg","source":"https://gudel-werkzeuge.de/cdn/shop/files/Logo_Gudel_Werkzeuge.svg?v=1760104910","source_sha256":"7f7ce8f521deea10ed84ac37d0691f1f92723f722dabf0311e44a87a50c4adf8","final_sha256":"7f7ce8f521deea10ed84ac37d0691f1f92723f722dabf0311e44a87a50c4adf8"},
+    {"file":"hero-banner.png","source":"https://gudel-werkzeuge.de/cdn/shop/files/Gudel_Werkzeuge_banner.png?v=1760105657","source_sha256":"9f7cad29d6534f0a13d1d234fbc24f9cc4fb88fdb9c79b8e3b60b85bd069ba72","final_sha256":"b2dbdbc5b2beb8080f2833996ce59a671aa51798a303efff5fc7c9c9dd498924"},
+    {"file":"team-workshop.jpg","derived_from":"hero-banner.png","operation":"Cropped to remove embedded banner copy while preserving the original team photograph; provenance embedded after export.","pre_metadata_sha256":"f72a2ddbe4386a7c48a6ca920bd69117572ad3cc980f1acb11a4d4ad3307c8a5","final_sha256":"ff6921c31ddde254c582d04801570ff94f1d92c43949a3b84e037fc7a0da351e"},
+    {"file":"maschinenpark.jpg","source":"https://gudel-werkzeuge.de/cdn/shop/files/schaerfen.de_-_Maschinen.jpg?v=1760036172","source_sha256":"c540b6772a101501cb3d3a68d46a11873aef1aceb3f4829f2371c2c3c1479793","final_sha256":"761162dc9c738003dd44f07e257c6e75d868bb64eb5db110d7ba8906a7db40f6"},
+    {"file":"gruender.webp","source":"https://xn--schrfen-7wa.de/cdn/shop/files/Gr_nder_schaerfen.de.webp?v=1758828464","source_sha256":"38e3040331477053becbcce36c596fec638cd2c137df5515bceabb514a0a16b4","final_sha256":"cc8433232724af87408618e9ca8ed7da40c132fd113eb54d33ebd240ad8aec25"},
+    {"file":"christian-jan-bernd.jpg","derived_from":"gruender.webp","operation":"Crop of the original Gudel workshop photograph to show Christian and Jan Bernd without the embedded advertising text; resized to 1600 × 851 px.","final_sha256":"79f1eb87ae4f113b63d8863ec971e4928a7b9cf9c598f8ceeb99f266cb20b951"},
+    {"file":"saegeblatt.jpg","source":"https://xn--schrfen-7wa.de/cdn/shop/files/Kreissaegeblatt.jpg?v=1749062783","source_sha256":"27027fb1e0ae88726fcb4a934e1e89bbeedf8730a0130001995006f7de201959","final_sha256":"b49a8818f8d9e44e7d1497c7e3e5e0b9a0cede717963a1c5bd28c6473e4c1679"},
+    {"file":"oberfraeser.jpg","source":"https://xn--schrfen-7wa.de/cdn/shop/files/sch_rfen.de_-_Oberfr_ser.jpg?v=1760035112","source_sha256":"5820b530d325fc8e2c1409cb1f3e5a1b666cf84027da0dca5bc532ad27fa6e6c","final_sha256":"59a1698efc4ddea777e404315063e6d1abed99f969cea58b730fb68863b0039f"},
+    {"file":"hobelmesser.jpg","source":"https://xn--schrfen-7wa.de/cdn/shop/files/sch_rfen.de_-_Hobelmesser.jpg?v=1760036001","source_sha256":"593ac8a94d1b2d30f4242d89dbb8bb7053a1f53b4758714cb53cf8f94a874680","final_sha256":"0c242d16d4d87245de0a08b81223a916b4a9eda8e43b0db6de0dccb7fc05ef45"},
+    {"file":"bohrer.png","source":"https://gudel-werkzeuge.de/cdn/shop/files/sch_rfen.de_-_Spiralbohrer.png?v=1760035730&width=1600","assignment":"Werkzeuggruppe: Bohrer und Senker","source_sha256":"9033e75e5482f3ebc1430d6f4192bb24e1112568e9b938e4b5a4a35898600a84","final_sha256":"9033e75e5482f3ebc1430d6f4192bb24e1112568e9b938e4b5a4a35898600a84"},
+    {"file":"pkd-fuegefraeser.jpg","source":"https://gudel-werkzeuge.de/cdn/shop/files/sch_rfen.de_-_PKD-F_gef_ser.jpg?v=1760035515&width=1600","assignment":"Werkzeuggruppe: PKD- und Diamantwerkzeuge","source_sha256":"303f2afc9639a677a6263c95050c1fcb73081af398fbd923d41ddf172cdb04ce","final_sha256":"303f2afc9639a677a6263c95050c1fcb73081af398fbd923d41ddf172cdb04ce"},
+    {"file":"profilmesser-koepfe.jpg","source":"https://gudel-werkzeuge.de/cdn/shop/files/sch_rfen.de_-_Profilmesser_-_K_pfe.jpg?v=1760035283&width=1600","assignment":"Werkzeuggruppe: Sonderwerkzeuge","source_sha256":"44a22f87a7e1c32952c84701d6f10183bea27ca377b38ef9ecae864a279cc803","final_sha256":"44a22f87a7e1c32952c84701d6f10183bea27ca377b38ef9ecae864a279cc803"},
+    {"file":"video-poster.jpg","source":"https://xn--schrfen-7wa.de/cdn/shop/files/preview_images/d1300303a76c42a9a6f5c915de33dd26.thumbnail.0000000000.jpg?v=1748985734","source_sha256":"a0a99365c6ba0b93db38316d38be22e1274641652ce3cdf5a580e49668dd0ae6","final_sha256":"015df9c3b4638a9d385a6ff9a85f7bf977beba26ca4f6c7d0e406ac391f1f2ce"},
+    {"file":"saegeblatt-schaerfen.mp4","source":"https://xn--schrfen-7wa.de/cdn/shop/videos/c/vp/d1300303a76c42a9a6f5c915de33dd26/d1300303a76c42a9a6f5c915de33dd26.SD-480p-1.5Mbps-48762548.mp4?v=0","source_sha256":"837b8069bdf12bde0147a596fc2fa23c842d42026ffe1a70549905796066cf33","final_sha256":"837b8069bdf12bde0147a596fc2fa23c842d42026ffe1a70549905796066cf33"},
+    {"file":"jan-bernd-cnc-saegeblatt-hochkant.mp4","source":"Provided directly by Jan Bernd Gudel in the campaign chat on 2026-09-10","source_context":"14.39-second vertical workshop video showing Jan Bernd speaking in front of CNC sharpening equipment; reserved for a later campaign creative.","final_sha256":"668c2ec4709e58c731c8b9a082eda6c6a061a4938f99f4626e1e6ee5f28fcd16"},
+    {"file":"fdpw.svg","source":"https://xn--schrfen-7wa.de/cdn/shop/files/FDPW.svg?v=1758828987","source_sha256":"aa41b9296fda395b1150b518e4e9a2ddd33757f071d21fd28f9bb7e057563ae7","final_sha256":"aa41b9296fda395b1150b518e4e9a2ddd33757f071d21fd28f9bb7e057563ae7"},
+    {"file":"meisterbetrieb.svg","source":"https://xn--schrfen-7wa.de/cdn/shop/files/Meisterbetrieb-sch_rfen.de.svg?v=1758829080","source_sha256":"5b34e70c3d5ffb55092758850d7a5c384a91fbbae79d64dc41e4cc7a2e581d5a","final_sha256":"5b34e70c3d5ffb55092758850d7a5c384a91fbbae79d64dc41e4cc7a2e581d5a"},
+    {"file":"innung.svg","source":"https://xn--schrfen-7wa.de/cdn/shop/files/Schneidwerkzeug_Mechaniker_Innung_M_nster.svg?v=1758829034","source_sha256":"e5b1877eb7d95c306d1753c5b3ebc9615e99d0a3ba14d8c2586b141f5ba2f731","final_sha256":"e5b1877eb7d95c306d1753c5b3ebc9615e99d0a3ba14d8c2586b141f5ba2f731"},
+    {"file":"fonts/dm-sans-medium.woff2","source":"https://gudel-werkzeuge.de/cdn/fonts/dm_sans/dmsans_n5.8a0f1984c77eb7186ceb87c4da2173ff65eb012e.woff2","final_sha256":"343d1979eca80812fc42aa73042a5574fabea1794923671707d3cd54c5bc1bd7"},
+    {"file":"fonts/jost-regular.woff2","source":"https://gudel-werkzeuge.de/cdn/fonts/jost/jost_n4.d47a1b6347ce4a4c9f437608011273009d91f2b7.woff2","final_sha256":"7dad5f9c6f6797dfb7eb44c18b36e31a4f01fd98a2903899be88de3bdd8517f6"},
+    {"file":"pkd-bearbeitung.jpg","source":"https://xn--schrfen-7wa.de/cdn/shop/files/1000022727.jpg?v=1749247922&width=1200","source_context":"About page image described as grinding a replaceable cutting insert for a form cutter; selected as campaign visual for in-house PKD processing.","final_sha256":"a69cc0efd470380b74fcf941314c189ac60ff85bf71503c34c6c4426ec0e08c6"}
+  ]
+}

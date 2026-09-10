@@ -4,115 +4,114 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>Zuverlässiger Schärfdienst | Gudel Werkzeuge</title>
-  <meta name="description" content="Planbare Abholung, Schärfen in der eigenen Werkstatt und Rücklieferung für gewerbliche Betriebe am Niederrhein, im Münsterland und im Ruhrgebiet.">
+  <title>Regionaler Schärfdienst | Gudel Werkzeuge</title>
+  <meta name="description" content="Gudel holt Werkzeuge im Ruhrgebiet, Münsterland und am Niederrhein ab, schärft sie in der eigenen Schleiferei und bringt sie zurück.">
   <link rel="stylesheet" href="styles.css">
   <script src="config.js"></script>
   <script src="app.js" defer></script>
 </head>
 <body>
   <!--
-  THESIS: Drei inhaltlich getrennte Kampagnen in einem gemeinsamen, Xurya-inspirierten System; kein allgemeiner Leistungskatalog.
-  OWN-WORLD: Gudel-Orange, tiefes Petrol, Warmweiß; große reale Bildflächen, weiche Rundungen und präzise Linien-Icons.
-  STORY: Thema erkennen, drei Vorteile erfassen, Ansprechpartner und Leistungen kennenlernen, Rückruf anfordern.
-  FIRST VIEWPORT: links reales Kampagnenbild, rechts eine klare Aussage mit CTA.
-  FORM: genau vier Pflichtfelder. Varianten: ?thema=service|pkd|cnc-komplett.
-  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+  THESIS: Der komplette regionale Schärfkreislauf wird als klarer Werkstattweg gezeigt; keine allgemeine Werkzeugnavigation.
+  OWN-WORLD: Gudel-Orange, Werkstatt-Anthrazit, Hellgrau und Weiß; reale Werkstattbilder, präzise Linien und kompakte Radien.
+  STORY: Versprechen verstehen, Ablauf und Vorteile prüfen, ehrliche Beleglage sehen, Werkzeuge und Region einordnen, Abholung anfragen.
+  FIRST VIEWPORT: links die kampagnenabhängige Aussage mit vier Nutzenpunkten und CTA, rechts eine dominante reale Schärfaufnahme.
+  FORM: achtteilige freigegebene Kampagnenstruktur; mobile-first; Seed: approved-landingpage-spec-2026-09-10.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
   -->
-
-  <svg class="icon-sprite" aria-hidden="true">
-    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3zM4 7l8 6 8-6"/></symbol>
-    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 5 14h7l-1 8 8-12h-7z"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M8 3 5 5c0 7 7 14 14 14l2-3-5-3-2 2c-2-1-4-3-5-5l2-2z"/></symbol>
-    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v11H3zM14 10h4l3 3v4h-7zM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm11 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></symbol>
-    <symbol id="i-tools" viewBox="0 0 24 24"><path d="m14 6 4-4 4 4-4 4M4 20l10-10M5 4l15 15M3 3l4 1-3 3z"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 13 5 5L21 6"/></symbol>
-    <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V4h4v17zM7 16h2m3 0h2m3 0h2"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></symbol>
-    <symbol id="i-diamond" viewBox="0 0 24 24"><path d="m3 8 4-5h10l4 5-9 13zM3 8h18M7 3l5 18 5-18"/></symbol>
-    <symbol id="i-grind" viewBox="0 0 24 24"><circle cx="8" cy="12" r="5"/><path d="M13 12h8M17 8v8M4 4l2 3m-2 13 2-3"/></symbol>
-    <symbol id="i-inspect" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M8 10h4"/></symbol>
-    <symbol id="i-mount" viewBox="0 0 24 24"><path d="M4 8h9l3 4-3 4H4zM16 9h5v6h-5M7 5v14"/></symbol>
-    <symbol id="i-balance" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M6 7l-3 6h6zM18 7l-3 6h6zM7 21h10"/></symbol>
-    <symbol id="i-measure" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 4v4m4-4v2m4-2v4M4 12h16"/></symbol>
-    <symbol id="i-document" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM14 3v4h4M9 12h6m-6 4h6"/></symbol>
-    <symbol id="i-saw" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M19 5l-2 2M7 17l-2 2"/></symbol>
-    <symbol id="i-router" viewBox="0 0 24 24"><path d="M9 3h6v5l2 3v8H7v-8l2-3zM9 14h6M12 19v3"/></symbol>
-    <symbol id="i-drill" viewBox="0 0 24 24"><path d="M10 2h4l-1 4 2 3-2 3 2 3-3 7-3-7 2-3-2-3 2-3z"/></symbol>
-    <symbol id="i-knife" viewBox="0 0 24 24"><path d="M4 17 17 4l3 3L7 20H4zM9 15l3 3"/></symbol>
-    <symbol id="i-custom" viewBox="0 0 24 24"><path d="M4 19 19 4m-3-1 5 5M3 16l5 5M8 8l2 2m2-6 2 2m4 6 2 2M5 12l2 2"/></symbol>
-    <symbol id="i-history" viewBox="0 0 24 24"><path d="M4 7V3m0 0h4M4 3l3 3a8 8 0 1 1-2 8"/><path d="M12 7v5l3 2"/></symbol>
-    <symbol id="i-masters" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-2a5 5 0 0 1 10 0v2m1-5a4 4 0 0 1 7 3v2"/></symbol>
-    <symbol id="i-cnc" viewBox="0 0 24 24"><path d="M3 4h18v16H3zM7 8h6v7H7zm9 0h2m-2 4h2m-2 4h2M6 20v2m12-2v2"/></symbol>
-  </svg>
-
   <header class="site-header">
-    <a class="brand" href="./" aria-label="Gudel Werkzeuge"><img src="assets/logo-gudel.svg" alt=""><span>Gudel Werkzeuge</span></a>
-    <a class="header-phone" href="tel:+492369209900">02369 20990-0</a>
+    <a class="brand" href="./" aria-label="Gudel Werkzeuge Startseite"><img src="assets/logo-gudel.svg" alt=""><span>Gudel Werkzeuge</span></a>
+    <a class="phone" href="tel:+492369209900"><span>Direkter Kontakt</span> 02369 20990-0</a>
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-photo"><img id="hero-image" src="assets/team-workshop.jpg" alt=""><span class="photo-label" id="photo-label"></span></div>
+    <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="region">Niederrhein · Münsterland · Ruhrgebiet</p>
+        <p class="region-line">Ruhrgebiet · Münsterland · Niederrhein</p>
         <h1 id="hero-title"></h1>
         <p class="hero-text" id="hero-text"></p>
-        <a class="primary-button" href="#rueckruf">Rückruf anfordern <span aria-hidden="true">↗</span></a>
+        <ul class="hero-benefits" aria-label="Ihre Vorteile">
+          <li>Eigener Abhol- &amp; Bringservice</li>
+          <li>Kurze Durchlaufzeiten</li>
+          <li>Digitale Statusinformationen</li>
+          <li>Persönlicher Ansprechpartner</li>
+        </ul>
+        <a class="cta" href="#anfrage">Schärfdienst testen <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="hero-media">
+        <img id="hero-image" src="assets/video-poster.jpg" alt="Kreissägeblatt beim Schärfen in der Werkstatt von Gudel Werkzeuge">
+        <figcaption id="hero-caption">Schärfen in der eigenen Schleiferei</figcaption>
+      </figure>
+    </section>
+
+    <section class="process section" id="ablauf" aria-labelledby="process-title">
+      <div class="section-intro"><h2 id="process-title">Schärfen lassen – ohne Aufwand</h2><p>Vom Betrieb in unsere Schleiferei und wieder zurück.</p></div>
+      <ol class="process-list">
+        <li class="process-step"><span>1</span><div><h3>Abholen</h3><p>Wir holen die Werkzeuge direkt bei Ihrem Betrieb ab.</p></div></li>
+        <li class="process-step"><span>2</span><div><h3>Schärfen</h3><p>Bearbeitung in unserer eigenen Schleiferei.</p></div></li>
+        <li class="process-step"><span>3</span><div><h3>Informieren</h3><p>Digitale Informationen zum aktuellen Status.</p></div></li>
+        <li class="process-step"><span>4</span><div><h3>Zurückbringen</h3><p>Fertige Werkzeuge werden wieder zu Ihrem Betrieb geliefert.</p></div></li>
+      </ol>
+      <a class="cta cta-dark" href="#anfrage">Abholung anfragen <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="reasons section" id="warum" aria-labelledby="reasons-title">
+      <div class="section-intro"><h2 id="reasons-title">Ein Schärfdienst, der in Ihren Betriebsablauf passt</h2><p>Klare Abläufe statt Verpacken, Versenden und Hinterhertelefonieren.</p></div>
+      <div class="reason-list">
+        <article class="reason"><h3>Eigener Abhol- &amp; Bringservice</h3><p>Kein Verpacken und kein Paketversand.</p></article>
+        <article class="reason"><h3>Planbare Touren</h3><p>Regelmäßige Abholung für Stammkunden.</p></article>
+        <article class="reason"><h3>Kurze Durchlaufzeiten</h3><p>In der Regel 2–3 Arbeitstage bei uns im Betrieb.</p></article>
+        <article class="reason"><h3>Express &amp; Sonderfahrten</h3><p>Wenn es dringend ist, prüfen wir kurzfristige Möglichkeiten.</p></article>
+        <article class="reason"><h3>Digital informiert</h3><p>Informationen zu Abholung, Bearbeitung und Rücklieferung.</p></article>
+        <article class="reason"><h3>Persönlicher Kontakt</h3><p>Direkte Ansprechpartner statt Hotline.</p></article>
       </div>
     </section>
 
-    <section class="benefits" aria-labelledby="benefit-title">
-      <div class="section-heading"><h2 id="benefit-title">Drei Vorteile</h2></div>
-      <div class="benefit-grid" id="benefit-grid"></div>
+    <section class="social-proof section" id="stimmen" aria-labelledby="proof-title">
+      <div class="proof-photo"><img src="assets/team-workshop.jpg" alt="Team von Gudel Werkzeuge in der eigenen Werkstatt"></div>
+      <div class="proof-copy"><h2 id="proof-title">Darauf verlassen sich Betriebe aus der Region</h2><div class="proof-placeholder"><strong>Echte Bewertungen werden noch ergänzt</strong><p>Hier zeigen wir erst dann Kundenstimmen oder Bewertungen, wenn sie geprüft und zur Veröffentlichung freigegeben sind.</p></div></div>
     </section>
 
-    <section class="about-team" aria-labelledby="team-title">
-      <div class="about-photo"><img src="assets/christian-jan-bernd.jpg" alt="Christian und Jan Bernd Gudel in der Werkstatt"></div>
-      <div class="about-copy">
-        <h2 id="team-title">Christian und Jan Bernd Gudel</h2>
-        <p>Der endgültige Vorstellungstext wird noch gemeinsam festgelegt.</p>
+    <section class="services section" id="leistungen" aria-labelledby="services-title">
+      <div class="section-intro"><h2 id="services-title">Was wir für Sie schärfen</h2><p>Werkzeuge für die Holz- und Kunststoffbearbeitung.</p></div>
+      <ul class="tool-list">
+        <li class="tool"><img src="assets/saegeblatt.jpg" alt="HW-Kreissägeblatt"><strong>HW-Sägeblätter</strong></li>
+        <li class="tool"><img src="assets/oberfraeser.jpg" alt="Verschiedene VHM-Fräser"><strong>VHM-Fräser</strong></li>
+        <li class="tool"><img src="assets/profilmesser-koepfe.jpg" alt="Werkzeugköpfe mit Profilmessern"><strong>Profilwerkzeuge</strong></li>
+        <li class="tool"><img src="assets/bohrer.png" alt="Spiralbohrer"><strong>Bohrer &amp; Senker</strong></li>
+        <li class="tool"><img src="assets/hobelmesser.jpg" alt="Hobelmesser"><strong>Hobelmesser</strong></li>
+        <li class="tool"><img src="assets/pkd-fuegefraeser.jpg" alt="PKD-bestückter Fügefräser"><strong>Weitere Präzisionswerkzeuge</strong></li>
+      </ul>
+    </section>
+
+    <section class="pickup section" id="regionen" aria-labelledby="pickup-title">
+      <div class="pickup-copy"><h2 id="pickup-title">Wir sind bei Ihnen unterwegs</h2><p>Eigener Abhol- und Bringservice für Tischlereien, Schreinereien und holzverarbeitende Betriebe.</p><p class="map-note">Die Grafik zeigt unsere Serviceregionen vereinfacht. Ob Ihr Standort auf einer Tour liegt, klären wir persönlich.</p><a class="cta" href="#anfrage">Prüfen, ob wir bei Ihnen abholen <span aria-hidden="true">→</span></a></div>
+      <div class="region-map" role="img" aria-label="Stilisierte Regionsgrafik mit Ruhrgebiet, Münsterland und Niederrhein; keine Darstellung exakter Tourgrenzen">
+        <svg viewBox="0 0 640 520" aria-hidden="true"><path class="route" d="M89 369C150 425 225 411 265 343S332 261 406 265s103-50 137-116"/><path class="zone zone-one" d="M152 316c-54 7-86 49-62 91 23 40 112 55 162 5 28-29 12-78-20-94-23-11-52-6-80-2Z"/><path class="zone zone-two" d="M311 80c-49 22-71 96-43 150 25 48 99 59 143 30 57-38 67-133 14-174-30-24-78-25-114-6Z"/><path class="zone zone-three" d="M318 269c-57 12-93 56-70 104 24 50 113 68 184 45 61-20 101-81 67-120-31-36-119-43-181-29Z"/><circle cx="218" cy="361" r="10"/><circle cx="355" cy="174" r="10"/><circle cx="388" cy="343" r="10"/></svg>
+        <span class="label niederrhein">Niederrhein</span><span class="label muensterland">Münsterland</span><span class="label ruhrgebiet">Ruhrgebiet</span><small>Schematische Darstellung</small>
       </div>
     </section>
 
-    <section class="services-brief" aria-labelledby="services-title">
-      <div class="services-heading"><h2 id="services-title">Diese Werkzeuge schärfen wir</h2><p>Die endgültigen Werkzeuggruppen legen wir noch gemeinsam fest.</p></div>
-      <ul class="service-list">
-        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-saw"></use></svg></span><strong>Sägeblätter</strong></li>
-        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-router"></use></svg></span><strong>Fräser</strong></li>
-        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-drill"></use></svg></span><strong>Bohrer und Senker</strong></li>
-        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-knife"></use></svg></span><strong>Hobelmesser</strong></li>
-        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-diamond"></use></svg></span><strong>PKD- und Diamantwerkzeuge</strong></li>
-        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-custom"></use></svg></span><strong>Sonderwerkzeuge</strong></li>
-      </ul>
+    <section class="contacts section" id="ansprechpartner" aria-labelledby="contacts-title">
+      <div class="contacts-photo"><img src="assets/christian-jan-bernd.jpg" alt="Christian und Jan Bernd Gudel in der Werkstatt"></div>
+      <div class="contacts-copy"><h2 id="contacts-title">Keine Hotline. Sondern Ansprechpartner.</h2><p>Gudel Werkzeuge verbindet eigene Fertigung mit direkter Betreuung. Wenn Sie eine Frage zu Ihrem Werkzeug oder zur Abholung haben, sprechen Sie mit uns.</p><div class="people"><div class="person"><strong>Jan Bernd Gudel</strong><span>Präzisionswerkzeugmechaniker-Meister</span><small>Technik &amp; Fertigung</small></div><div class="person"><strong>Christian Gudel</strong><span>Vertrieb &amp; Kundenbetreuung</span></div></div><a class="text-link" href="https://gudel-werkzeuge.de/pages/wir-uber-uns" target="_blank" rel="noopener">Mehr über Gudel Werkzeuge →</a></div>
     </section>
 
-    <section class="trust-strip" aria-label="Vertrauen">
-      <ul>
-        <li><span><svg aria-hidden="true"><use href="#i-history"></use></svg></span><strong>Seit 1966</strong></li>
-        <li><span><svg aria-hidden="true"><use href="#i-factory"></use></svg></span><strong>Eigene Werkstatt</strong></li>
-        <li><span><svg aria-hidden="true"><use href="#i-masters"></use></svg></span><strong>Zwei Meister</strong></li>
-        <li><span><svg aria-hidden="true"><use href="#i-cnc"></use></svg></span><strong>CNC-Maschinenpark</strong></li>
-      </ul>
-    </section>
-
-    <section class="callback" id="rueckruf" aria-labelledby="form-title">
-      <div class="callback-intro"><h2 id="form-title">Wir rufen Sie zurück.</h2><p id="form-intro"></p></div>
+    <section class="request section" id="anfrage" aria-labelledby="request-title">
+      <div class="request-intro"><h2 id="request-title">Probieren Sie unseren Schärfdienst einfach aus</h2><p>Einige Werkzeuge zum Testen mitgeben und unseren Service kennenlernen.</p><p class="direct-contact">Direkt erreichbar unter <a href="tel:+492369209900">02369 20990-0</a></p></div>
       <form class="request-form" novalidate>
-        <label><span>Vorname</span><input id="first-name" name="firstName" autocomplete="given-name" required></label>
-        <label><span>Nachname</span><input id="last-name" name="lastName" autocomplete="family-name" required></label>
         <label><span>Firma</span><input id="company" name="company" autocomplete="organization" required></label>
-        <label><span>Telefonnummer</span><input id="phone" name="phone" type="tel" autocomplete="tel" required></label>
-        <input type="hidden" name="campaignTheme" id="campaign-theme">
-        <input type="hidden" name="utm_source" id="utm_source"><input type="hidden" name="utm_medium" id="utm_medium"><input type="hidden" name="utm_campaign" id="utm_campaign"><input type="hidden" name="utm_content" id="utm_content">
-        <p class="privacy-note">Mit dem Absenden erklären Sie sich damit einverstanden, dass wir Sie zu Ihrer Anfrage telefonisch kontaktieren. Hinweise finden Sie in der <a href="https://gudel-werkzeuge.de/policies/privacy-policy" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
-        <button class="submit-button" type="submit">Rückruf anfordern <span aria-hidden="true">↗</span></button>
+        <label><span>Ansprechpartner</span><input id="contact-person" name="contactPerson" autocomplete="name" required></label>
+        <label><span>PLZ / Ort</span><input id="place" name="place" autocomplete="postal-code" required></label>
+        <label><span>Telefon</span><input id="phone" name="phone" type="tel" autocomplete="tel" required></label>
+        <label class="wide"><span>E-Mail</span><input id="email" name="email" type="email" autocomplete="email" required></label>
+        <input type="hidden" name="campaignTheme" id="campaign-theme"><input type="hidden" name="utm_source" id="utm_source"><input type="hidden" name="utm_medium" id="utm_medium"><input type="hidden" name="utm_campaign" id="utm_campaign"><input type="hidden" name="utm_content" id="utm_content">
+        <p class="privacy-note">Mit dem Absenden erklären Sie sich damit einverstanden, dass wir Sie zu Ihrer Anfrage kontaktieren. Hinweise finden Sie in der <a href="https://gudel-werkzeuge.de/policies/privacy-policy" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
+        <button class="submit-button" type="submit">Abholung anfragen <span aria-hidden="true">→</span></button>
         <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
-
   <footer><span>© Gudel Werkzeuge</span><nav aria-label="Rechtliche Hinweise"><a href="https://gudel-werkzeuge.de/policies/legal-notice" target="_blank" rel="noopener">Impressum</a><a href="https://gudel-werkzeuge.de/policies/privacy-policy" target="_blank" rel="noopener">Datenschutz</a></nav></footer>
 </body>
 </html>
