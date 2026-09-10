@@ -37,6 +37,14 @@
     <symbol id="i-balance" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M6 7l-3 6h6zM18 7l-3 6h6zM7 21h10"/></symbol>
     <symbol id="i-measure" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 4v4m4-4v2m4-2v4M4 12h16"/></symbol>
     <symbol id="i-document" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM14 3v4h4M9 12h6m-6 4h6"/></symbol>
+    <symbol id="i-saw" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M19 5l-2 2M7 17l-2 2"/></symbol>
+    <symbol id="i-router" viewBox="0 0 24 24"><path d="M9 3h6v5l2 3v8H7v-8l2-3zM9 14h6M12 19v3"/></symbol>
+    <symbol id="i-drill" viewBox="0 0 24 24"><path d="M10 2h4l-1 4 2 3-2 3 2 3-3 7-3-7 2-3-2-3 2-3z"/></symbol>
+    <symbol id="i-knife" viewBox="0 0 24 24"><path d="M4 17 17 4l3 3L7 20H4zM9 15l3 3"/></symbol>
+    <symbol id="i-custom" viewBox="0 0 24 24"><path d="M4 19 19 4m-3-1 5 5M3 16l5 5M8 8l2 2m2-6 2 2m4 6 2 2M5 12l2 2"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24"><path d="M4 7V3m0 0h4M4 3l3 3a8 8 0 1 1-2 8"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-masters" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-2a5 5 0 0 1 10 0v2m1-5a4 4 0 0 1 7 3v2"/></symbol>
+    <symbol id="i-cnc" viewBox="0 0 24 24"><path d="M3 4h18v16H3zM7 8h6v7H7zm9 0h2m-2 4h2m-2 4h2M6 20v2m12-2v2"/></symbol>
   </svg>
 
   <header class="site-header">
@@ -53,7 +61,6 @@
         <p class="hero-text" id="hero-text"></p>
         <a class="primary-button" href="#rueckruf">Rückruf anfordern <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="accent-disc" aria-hidden="true"><img src="assets/logo-gudel.svg" alt=""></div>
     </section>
 
     <section class="benefits" aria-labelledby="benefit-title">
@@ -65,13 +72,29 @@
       <div class="about-photo"><img src="assets/christian-jan-bernd.jpg" alt="Christian und Jan Bernd Gudel in der Werkstatt"></div>
       <div class="about-copy">
         <h2 id="team-title">Christian und Jan Bernd Gudel</h2>
-        <p>Wir führen Gudel Werkzeuge gemeinsam. Als Präzisionswerkzeugmechaniker-Meister sind wir Ihre direkten Ansprechpartner – von der technischen Abstimmung bis zur Rücklieferung.</p>
+        <p>Der endgültige Vorstellungstext wird noch gemeinsam festgelegt.</p>
       </div>
     </section>
 
     <section class="services-brief" aria-labelledby="services-title">
-      <h2 id="services-title">Unsere Leistungen</h2>
-      <p>Sägeblätter, Fräser, Bohrer, Hobelmesser sowie PKD- und Diamantwerkzeuge schärfen wir in unserer eigenen Werkstatt. Sonderwerkzeuge fertigen wir nach Bedarf neu an.</p>
+      <div class="services-heading"><h2 id="services-title">Diese Werkzeuge schärfen wir</h2><p>Die endgültigen Werkzeuggruppen legen wir noch gemeinsam fest.</p></div>
+      <ul class="service-list">
+        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-saw"></use></svg></span><strong>Sägeblätter</strong></li>
+        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-router"></use></svg></span><strong>Fräser</strong></li>
+        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-drill"></use></svg></span><strong>Bohrer und Senker</strong></li>
+        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-knife"></use></svg></span><strong>Hobelmesser</strong></li>
+        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-diamond"></use></svg></span><strong>PKD- und Diamantwerkzeuge</strong></li>
+        <li><span class="service-icon"><svg aria-hidden="true"><use href="#i-custom"></use></svg></span><strong>Sonderwerkzeuge</strong></li>
+      </ul>
+    </section>
+
+    <section class="trust-strip" aria-label="Vertrauen">
+      <ul>
+        <li><span><svg aria-hidden="true"><use href="#i-history"></use></svg></span><strong>Seit 1966</strong></li>
+        <li><span><svg aria-hidden="true"><use href="#i-factory"></use></svg></span><strong>Eigene Werkstatt</strong></li>
+        <li><span><svg aria-hidden="true"><use href="#i-masters"></use></svg></span><strong>Zwei Meister</strong></li>
+        <li><span><svg aria-hidden="true"><use href="#i-cnc"></use></svg></span><strong>CNC-Maschinenpark</strong></li>
+      </ul>
     </section>
 
     <section class="callback" id="rueckruf" aria-labelledby="form-title">
